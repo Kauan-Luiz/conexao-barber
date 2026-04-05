@@ -4,7 +4,7 @@
 define('DB_HOST', 'jmdzjpkm794k8pw7hjxc174x');
 
 // IMPORTANTE: Veja se o campo "Initial Database" no Coolify está como sistema_tv ou default. Tem que ser igual.
-define('DB_NAME', 'sistema_tv'); 
+define('DB_NAME', 'default');
 
 define('DB_USER', 'root'); 
 
