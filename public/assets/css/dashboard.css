@@ -1,0 +1,78 @@
+/* ==========================================
+   CSS ESPECÍFICO: DASHBOARD (VISÃO GERAL)
+   ========================================== */
+
+/* Topbar Actions (Botões do topo) */
+.topbar-actions { display: flex; gap: 12px; }
+.btn-icon-top { background: #ffffff; border: 1px solid var(--borda-suave); color: var(--texto-secundario); padding: 10px 14px; border-radius: 8px; cursor: pointer; transition: 0.3s; box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
+.btn-icon-top:hover { color: var(--azul-destaque); border-color: var(--azul-destaque); transform: translateY(-2px); }
+
+/* ==========================================
+   KPIS CARDS (Os 4 cards superiores)
+   ========================================== */
+.kpi-grid { display: flex; gap: 20px; }
+.kpi-card { background: #ffffff; flex: 1; padding: 25px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); display: flex; align-items: center; gap: 20px; border: 1px solid var(--borda-suave); transition: transform 0.3s ease; }
+.kpi-card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); }
+
+.kpi-icon-wrapper { width: 54px; height: 54px; border-radius: 12px; background: rgba(37, 99, 235, 0.1); display: flex; align-items: center; justify-content: center; color: var(--azul-destaque); font-size: 24px; }
+.kpi-icon-wrapper.green { background: rgba(16, 185, 129, 0.1); color: var(--sucesso); }
+
+.kpi-info h3 { font-size: 24px; color: var(--texto-principal); font-weight: 700; line-height: 1.2; }
+.kpi-info p { font-size: 14px; color: var(--texto-secundario); font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 4px; }
+.status-online { color: var(--sucesso); font-weight: 700; display: flex; align-items: center; gap: 6px; }
+.status-online::before { content: ''; width: 8px; height: 8px; background-color: var(--sucesso); border-radius: 50%; display: inline-block; box-shadow: 0 0 8px var(--sucesso); }
+
+/* ==========================================
+   GRID CENTRAL (Listas de TVs e Anúncios)
+   ========================================== */
+.middle-grid { display: flex; gap: 25px; align-items: flex-start; }
+
+/* Coluna TVs (Esquerda) */
+.col-tvs { flex: 2; }
+.tv-list { display: flex; flex-direction: column; gap: 0; }
+.tv-item { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; border-bottom: 1px solid var(--borda-suave); }
+.tv-item:last-child { border-bottom: none; padding-bottom: 0; }
+
+.tv-info-wrapper { display: flex; align-items: center; gap: 18px; }
+.tv-thumb { width: 90px; height: 60px; background: var(--bg-body); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--texto-secundario); font-size: 24px; border: 1px solid var(--borda-suave); }
+.tv-text h4 { font-size: 16px; color: var(--texto-principal); font-weight: 600; }
+.tv-text p { font-size: 13px; color: var(--texto-secundario); margin-top: 5px; display: flex; align-items: center; gap: 6px; }
+.tv-text p i { font-size: 11px; }
+
+.tv-actions { display: flex; gap: 8px; }
+.btn-action { background: var(--bg-body); color: var(--texto-principal); border: 1px solid var(--borda-suave); padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 13px; font-weight: 600; transition: 0.2s; display: flex; align-items: center; gap: 6px; }
+.btn-action:hover { background: var(--azul-destaque); color: #ffffff; border-color: var(--azul-destaque); }
+.btn-action.outline { background: transparent; }
+.btn-action.outline:hover { background: var(--bg-body); color: var(--azul-destaque); }
+
+/* Coluna Anúncios (Direita) */
+.col-anuncios { flex: 1; }
+.ad-item { display: flex; align-items: center; gap: 15px; margin-bottom: 16px; padding-bottom: 16px; border-bottom: 1px solid var(--borda-suave); }
+.ad-item:last-of-type { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+.ad-thumb { width: 56px; height: 42px; background: var(--bg-sidebar); border-radius: 6px; object-fit: cover; display: flex; align-items: center; justify-content: center; color: white; font-size: 16px; }
+.ad-text { flex: 1; }
+.ad-text h4 { font-size: 14px; color: var(--texto-principal); font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 140px; }
+.ad-text p { font-size: 12px; color: var(--texto-secundario); margin-top: 3px; }
+
+.btn-edit-ad { color: var(--texto-secundario); background: transparent; border: none; cursor: pointer; font-size: 16px; padding: 5px; transition: color 0.2s; }
+.btn-edit-ad:hover { color: var(--azul-destaque); }
+
+.btn-add-full { width: 100%; background: var(--azul-destaque); color: white; text-align: center; padding: 12px; border-radius: 8px; text-decoration: none; font-size: 14px; font-weight: 600; display: flex; justify-content: center; align-items: center; gap: 8px; margin-top: 20px; transition: 0.3s; box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2); }
+.btn-add-full:hover { background: #1d4ed8; transform: translateY(-2px); }
+
+/* ==========================================
+   ÁREA DO GRÁFICO
+   ========================================== */
+.chart-panel { margin-top: 0; }
+.chart-container { position: relative; height: 280px; width: 100%; margin-top: 15px; }
+
+/* ==========================================
+   RESPONSIVIDADE (Telas Menores)
+   ========================================== */
+@media (max-width: 1100px) {
+    .kpi-grid { flex-wrap: wrap; }
+    .kpi-card { min-width: calc(50% - 10px); }
+    .middle-grid { flex-direction: column; }
+    .col-tvs, .col-anuncios { width: 100%; }
+}
